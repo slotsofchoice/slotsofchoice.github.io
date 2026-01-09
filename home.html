@@ -3,40 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Slots of Choice - Honest, unbiased real money casino reviews.">
-    <title>Slots of Choice - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Honest casino reviews, real bonuses, and the latest slots. Find the best online casinos in the US with detailed reviews, ratings, and exclusive offers.">
+    <title>SlotsofChoice - Honest Casino Reviews & Best Bonuses | Top US Online Casinos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="inner-page">
-    <header class="site-header">
+<body>
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <h1>🎰 Slots of Choice</h1>
-            <nav>
-                <a href="home.html">Home</a>
-                <a href="about.html">About/Methodology</a>
-                <a href="tools.html">Tools</a>
-                <a href="terms.html">Terms</a>
+            <nav class="nav-content">
+                <div class="logo">
+                    <a href="home.html">🎰 SlotsofChoice</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="#casinos">Casino Reviews</a></li>
+                    <li><a href="#bonuses">Bonuses</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
             </nav>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#casinos">Casino Reviews</a></li>
+                    <li><a href="#bonuses">Bonuses</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="intro">
-            <h2>Welcome to Slots of Choice</h2>
-            <p>Honest, unbiased reviews of real money online casinos. No ads. Equal affiliate earnings = true impartiality.</p>
-            <p>Featured casinos coming soon — state-specific lists, detailed reviews, and more.</p>
-        </section>
-
-        <section class="placeholders">
-            <h2>Top Picks (Placeholder)</h2>
-            <p>Casino reviews and comparisons will be added here.</p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
+    <!-- Hero Section -->
+    <section class="hero-home">
         <div class="container">
-            <p>© 2026 Slots of Choice. 21+ only. Gamble responsibly.</p>
+            <div class="hero-content">
+                <h1>Trusted Casino Reviews for Smarter Decisions</h1>
+                <p class="hero-subtitle">Discover the most honest reviews of top US online casinos. We test every site to bring you verified bonuses, real payout data, and expert insights.</p>
+                <div class="hero-badges">
+                    <span class="badge">🏆 Honest Reviews</span>
+                    <span class="badge">💰 Latest Bonuses</span>
+                    <span class="badge">✓ Licensed & Verified</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="unique-value">
+        <div class="container">
+            <div class="value-grid">
+                <a href="#real-money" class="value-card">
+                    <div class="value-icon">💵</div>
+                    <h3>Real Money Casinos</h3>
+                    <p>Top-rated casinos where you can play for real money with confidence</p>
+                </a>
+                <a href="#no-deposit" class="value-card">
+                    <div class="value-icon">🎁</div>
+                    <h3>No Deposit Bonuses</h3>
+                    <p>Play without risking your own money with exclusive no deposit offers</p>
+                </a>
+                <a href="#fast-payout" class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>Fast Payout Casinos</h3>
+                    <p>Get your winnings quickly with casinos that prioritize fast withdrawals</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casino Reviews Section -->
+    <section id="casinos" class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Explore Our Casino Reviews</h2>
+            <p class="section-subtitle">Last Updated: January 09, 2026</p>
+
+            <!-- Affiliate Disclosure -->
+            <div class="affiliate-disclosure">
+                <h3>Affiliate Disclosure</h3>
+                <p>SlotsofChoice.com participates in affiliate programs, including GenesysOne. We may earn a commission when you click on links to casinos reviewed on our site. However, our casino reviews and recommendations are never influenced by these commissions and are based solely on our independent and thorough review process. We maintain impartial editorial standards to ensure the casinos we feature meet our high standards for safety, fairness, and overall player experience.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="rating-desc">Rating (High to Low)</option>
+                        <option value="rating-asc">Rating (Low to High)</option>
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="min-deposit">Min Deposit:</label>
+                    <select id="min-deposit">
+                        <option value="all">All</option>
+                        <option value="0">$0</option>
+                        <option value="1">$1</option>
+                        <option value="5">$5</option>
+                        <option value="10">$10</option>
+                        <option value="20">$20+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="wagering">Wagering:</label>
+                    <select id="wagering">
+                        <option value="all">All</option>
+                        <option value="low">Low (0-20x)</option>
+                        <option value="medium">Medium (21-40x)</option>
+                        <option value="high">High (41x+)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Casino Cards -->
+            <div class="casino-cards-grid" id="casino-grid">
+                <!-- Card 1: Mandarin Palace -->
+                <div class="enhanced-casino-card" data-rating="4.8" data-name="Mandarin Palace" data-min-deposit="10" data-wagering="35">
+                    <div class="casino-header">
+                        <div class="casino-logo-placeholder">
+                            <span style="font-size: 3rem;">🏯</span>
+                        </div>
+                        <div class="casino-title-rating">
+                            <h3>Mandarin Palace</h3>
+                            <div class="rating-display">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-number">4.8/5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonus-banner">
+                        <strong>Welcome Bonus:</strong> 300% up to $3,000
+                    </div>
+
+                    <div class="casino-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Min Deposit:</span>
+                            <span class="detail-value">$10</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Wagering:</span>
+                            <span class="detail-value">35x</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Established:</span>
+                            <span class="detail-value">2009</span>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✓ Pros</h4>
+                            <ul>
+                                <li>24/7 Customer Support</li>
+                                <li>Fast Crypto Payouts</li>
+                                <li>200+ Slot Games</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>✗ Cons</h4>
+                            <ul>
+                                <li>High Wagering Requirements</li>
+                                <li>Limited Payment Methods</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <span class="payment-label">Payment Methods:</span>
+                        <div class="payment-icons">
+                            <span class="payment-icon" title="Visa">💳 VISA</span>
+                            <span class="payment-icon" title="Mastercard">💳 MC</span>
+                            <span class="payment-icon" title="Bitcoin">₿ BTC</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="casinos/mandarin-palace.html" class="btn-secondary">Read Review</a>
+                        <a href="#" class="btn-primary" rel="nofollow" target="_blank">Visit Casino</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Zodiac Casino -->
+                <div class="enhanced-casino-card" data-rating="4.6" data-name="Zodiac Casino" data-min-deposit="1" data-wagering="20">
+                    <div class="casino-header">
+                        <div class="casino-logo-placeholder">
+                            <span style="font-size: 3rem;">♈</span>
+                        </div>
+                        <div class="casino-title-rating">
+                            <h3>Zodiac Casino</h3>
+                            <div class="rating-display">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.6/5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonus-banner">
+                        <strong>Welcome Bonus:</strong> $1 for 80 chances to win
+                    </div>
+
+                    <div class="casino-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Min Deposit:</span>
+                            <span class="detail-value">$1</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Wagering:</span>
+                            <span class="detail-value">20x</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Established:</span>
+                            <span class="detail-value">2001</span>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✓ Pros</h4>
+                            <ul>
+                                <li>Microgaming Platform</li>
+                                <li>Progressive Jackpots</li>
+                                <li>Mobile Optimized</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>✗ Cons</h4>
+                            <ul>
+                                <li>Restricted in Some States</li>
+                                <li>Older Website Design</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <span class="payment-label">Payment Methods:</span>
+                        <div class="payment-icons">
+                            <span class="payment-icon" title="Visa">💳 VISA</span>
+                            <span class="payment-icon" title="Mastercard">💳 MC</span>
+                            <span class="payment-icon" title="Interac">💰 Interac</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="casinos/zodiac-casino.html" class="btn-secondary">Read Review</a>
+                        <a href="#" class="btn-primary" rel="nofollow" target="_blank">Visit Casino</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Casino Classic -->
+                <div class="enhanced-casino-card" data-rating="4.5" data-name="Casino Classic" data-min-deposit="10" data-wagering="40">
+                    <div class="casino-header">
+                        <div class="casino-logo-placeholder">
+                            <span style="font-size: 3rem;">🎲</span>
+                        </div>
+                        <div class="casino-title-rating">
+                            <h3>Casino Classic</h3>
+                            <div class="rating-display">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.5/5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonus-banner">
+                        <strong>Welcome Bonus:</strong> $500 Free Play
+                    </div>
+
+                    <div class="casino-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Min Deposit:</span>
+                            <span class="detail-value">$10</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Wagering:</span>
+                            <span class="detail-value">40x</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Established:</span>
+                            <span class="detail-value">1999</span>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✓ Pros</h4>
+                            <ul>
+                                <li>Established Reputation</li>
+                                <li>Wide Game Selection</li>
+                                <li>VIP Rewards Program</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>✗ Cons</h4>
+                            <ul>
+                                <li>Higher Wagering Requirements</li>
+                                <li>Limited Live Chat Hours</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <span class="payment-label">Payment Methods:</span>
+                        <div class="payment-icons">
+                            <span class="payment-icon" title="Visa">💳 VISA</span>
+                            <span class="payment-icon" title="Mastercard">💳 MC</span>
+                            <span class="payment-icon" title="Neteller">💰 Neteller</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="casinos/casino-classic.html" class="btn-secondary">Read Review</a>
+                        <a href="#" class="btn-primary" rel="nofollow" target="_blank">Visit Casino</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Captain Cooks -->
+                <div class="enhanced-casino-card" data-rating="4.7" data-name="Captain Cooks Casino" data-min-deposit="5" data-wagering="20">
+                    <div class="casino-header">
+                        <div class="casino-logo-placeholder">
+                            <span style="font-size: 3rem;">⚓</span>
+                        </div>
+                        <div class="casino-title-rating">
+                            <h3>Captain Cooks Casino</h3>
+                            <div class="rating-display">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-number">4.7/5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonus-banner">
+                        <strong>Welcome Bonus:</strong> 100 chances for $5
+                    </div>
+
+                    <div class="casino-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Min Deposit:</span>
+                            <span class="detail-value">$5</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Wagering:</span>
+                            <span class="detail-value">20x</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Established:</span>
+                            <span class="detail-value">1999</span>
+                        </div>
+                    </div>
+
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✓ Pros</h4>
+                            <ul>
+                                <li>Mega Moolah Jackpot</li>
+                                <li>Safe Banking Options</li>
+                                <li>Expert Customer Care</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>✗ Cons</h4>
+                            <ul>
+                                <li>No Live Dealer Games</li>
+                                <li>Limited Crypto Options</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <span class="payment-label">Payment Methods:</span>
+                        <div class="payment-icons">
+                            <span class="payment-icon" title="Visa">💳 VISA</span>
+                            <span class="payment-icon" title="Mastercard">💳 MC</span>
+                            <span class="payment-icon" title="Skrill">💰 Skrill</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="casinos/captain-cooks.html" class="btn-secondary">Read Review</a>
+                        <a href="#" class="btn-primary" rel="nofollow" target="_blank">Visit Casino</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Bonuses Section -->
+    <section id="bonuses" class="latest-bonuses">
+        <div class="container">
+            <h2 class="section-title">🔥 Latest Bonuses This Month</h2>
+            <div class="bonus-ticker">
+                <div class="bonus-item">
+                    <h4>Mandarin Palace</h4>
+                    <p>300% Match Bonus + 50 Free Spins</p>
+                    <small>Code: PALACE300</small>
+                </div>
+                <div class="bonus-item">
+                    <h4>Zodiac Casino</h4>
+                    <p>80 Chances to Win for Just $1</p>
+                    <small>New Players Only</small>
+                </div>
+                <div class="bonus-item">
+                    <h4>Casino Classic</h4>
+                    <p>$500 Free Play Bonus</p>
+                    <small>60 Minutes to Play</small>
+                </div>
+                <div class="bonus-item">
+                    <h4>Captain Cooks</h4>
+                    <p>100 Chances for $5</p>
+                    <small>Mega Moolah Exclusive</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Process Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">How We Review Casinos</h2>
+            <p class="section-subtitle">Our thorough review process ensures you get accurate, unbiased information</p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-icon">🔍</div>
+                    <h3>Key Decision Factors</h3>
+                    <p>We evaluate sign-up process, verification requirements, banking methods, game selection, bonuses, and customer support to help you make informed decisions.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">⚖️</div>
+                    <h3>Benefits & Drawbacks</h3>
+                    <p>We present a balanced view of each casino, highlighting both strengths and weaknesses so you know exactly what to expect.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">📊</div>
+                    <h3>Competitive Analysis</h3>
+                    <p>We compare casinos against competitors to help you understand how they stack up in terms of offerings and user experience.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">✨</div>
+                    <h3>User Experience</h3>
+                    <p>Our experts test each casino firsthand, providing honest verdicts based on real gameplay and customer service interactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have a Casino Complaint?</h2>
+                <p>Our dispute resolution team is here to help. Submit your complaint and we'll guide you through the process.</p>
+                <a href="complaints.html" class="cta-button">Submit a Complaint</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SlotsofChoice</h4>
+                    <p>Empowering your online casino experience with expert reviews and insights.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Casino Types</h4>
+                    <ul>
+                        <li><a href="real-money-casinos.html">Real Money Casinos</a></li>
+                        <li><a href="fast-payout-casinos.html">Fast Payout Casinos</a></li>
+                        <li><a href="live-dealer-casinos.html">Live Dealer Casinos</a></li>
+                        <li><a href="mobile-casinos.html">Mobile Casinos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="complaints.html">Submit Complaint</a></li>
+                        <li><a href="responsible-gambling.html">Responsible Gambling</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 SlotsofChoice.com - All rights reserved</p>
+                <p style="margin-top: 10px;">18+ Only. Gambling can be addictive. Please play responsibly. If you need help, call 1-800-522-4700.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
