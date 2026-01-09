@@ -3,64 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Slots of Choice - Unbiased real money casino reviews. Equal affiliate earnings guarantee honest recommendations.">
-    <title>Slots of Choice - Real Money Casino Reviews</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="SlotsofChoice - Honest reviews of the best online casinos. Must be 18+ to enter.">
+    <title>SlotsofChoice - 18+ Age Verification Required</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="landing-page">
-    <div class="landing-container">
-        <div class="landing-content">
-            <!-- Logo/Brand -->
-            <div class="brand">
-                <h1>🎰 Slots of Choice</h1>
-                <p class="tagline">Honest Reviews. Real Casinos. Your Choice.</p>
-            </div>
-
-            <!-- Age Verification -->
-            <div class="age-gate">
-                <div class="warning-icon">⚠️</div>
-                <h2>Age Verification Required</h2>
-                <p class="age-text">You must be 21 years or older to access this website.</p>
-                <p class="legal-text">This site contains information about real money online gambling.</p>
-            </div>
-
-            <!-- Disclaimers -->
-            <div class="disclaimers">
-                <div class="disclaimer-box">
-                    <h3>📢 Affiliate Disclosure</h3>
-                    <p>Slots of Choice is an affiliate marketing website. We earn commissions when you sign up through our links. <strong>What makes us different:</strong> We earn equal commissions from all featured casinos, which virtually guarantees our reviews remain unbiased. Your choice = our recommendation.</p>
+<body>
+    <div class="landing-page">
+        <div class="landing-container">
+            <div class="landing-content">
+                <!-- Brand Header -->
+                <div class="brand">
+                    <h1>🎰 SlotsofChoice</h1>
+                    <p class="tagline">Honest Casino Reviews & Expert Insights</p>
                 </div>
 
-                <div class="disclaimer-box highlight">
-                    <h3>🚫 NO ADS EVER</h3>
-                    <p>We will never display third-party advertisements. Our revenue comes solely from casino affiliate partnerships with equal earnings across all platforms. This means no annoying pop-ups, banners, or sponsored content cluttering your experience.</p>
+                <!-- Age Gate Warning -->
+                <div class="age-gate">
+                    <div class="warning-icon">⚠️</div>
+                    <h2>Age Verification Required</h2>
+                    <p class="age-text">You must be 18 years or older to enter this site</p>
+                    <p class="legal-text">By entering this website, you confirm that you are of legal gambling age in your jurisdiction and agree to our terms of use.</p>
+                </div>
+
+                <!-- Key Disclaimers -->
+                <div class="disclaimers">
+                    <div class="disclaimer-box highlight">
+                        <h3>🎲 Gambling Can Be Addictive</h3>
+                        <p>Please play responsibly. If you or someone you know has a gambling problem, help is available. Call the National Council on Problem Gambling helpline at <strong>1-800-522-4700</strong> or visit <a href="https://www.ncpgambling.org/" target="_blank" rel="noopener">NCPG.org</a> for support.</p>
+                    </div>
+
+                    <div class="disclaimer-box">
+                        <h3>💼 Affiliate Disclosure</h3>
+                        <p>SlotsofChoice.com participates in affiliate programs including GenesysOne. We may receive compensation when you visit casinos through our links. Our reviews remain independent, honest, and unbiased regardless of affiliate relationships.</p>
+                    </div>
+
+                    <div class="disclaimer-box">
+                        <h3>📍 Geographic Restrictions Apply</h3>
+                        <p>Online gambling laws vary by state and jurisdiction. It is your responsibility to ensure that online gambling is legal in your location before playing. Some casinos may not accept players from certain states or countries.</p>
+                    </div>
+                </div>
+
+                <!-- Enter Button -->
+                <button class="enter-btn" onclick="enterSite()">
+                    <span>I am 18+ and Accept Terms</span>
+                    <span class="enter-arrow">→</span>
+                </button>
+
+                <!-- About Preview -->
+                <div class="about-preview">
+                    <h3>About SlotsofChoice</h3>
+                    <p>SlotsofChoice brings together the most honest reviews of some of the best online casinos available in the US. We review casinos based on our own strict criteria including customer service quality, casino credibility, game payouts, available bonuses, and wagering requirements. Our mission is to help you make informed decisions about where to play online.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="landing-footer">
+                    <div class="footer-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <span class="separator">|</span>
+                        <a href="terms.html">Terms of Use</a>
+                        <span class="separator">|</span>
+                        <a href="responsible-gambling.html">Responsible Gambling</a>
+                    </div>
+                    <p class="footer-note">© 2025 SlotsofChoice.com - All Rights Reserved</p>
                 </div>
             </div>
-
-            <!-- Enter Button -->
-            <a href="home.html" class="enter-btn">
-                <span>I am 21+ and Accept Terms</span>
-                <span class="enter-arrow">→</span>
-            </a>
-
-            <!-- About Section -->
-            <div class="about-preview">
-                <h3>About Slots of Choice</h3>
-                <p>We review <strong>real money online casinos</strong> - not social or sweepstakes casinos. Our mission is to provide honest, unbiased comparisons to help you make informed decisions. With our unique equal-commission model and strict no-advertising policy, you can trust that our recommendations are based purely on quality and player experience.</p>
-            </div>
-
-            <!-- Footer Links -->
-            <footer class="landing-footer">
-                <div class="footer-links">
-                    <a href="terms.html">Terms of Service</a>
-                    <span class="separator">•</span>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <span class="separator">•</span>
-                    <a href="no-ads-policy.html">No Ads Policy</a>
-                </div>
-                <p class="footer-note">© 2026 Slots of Choice. Gamble responsibly. 21+ only.</p>
-            </footer>
         </div>
     </div>
+
+    <script>
+        function enterSite() {
+            // Set age verification cookie/localStorage
+            localStorage.setItem('ageVerified', 'true');
+            localStorage.setItem('ageVerifiedDate', new Date().toISOString());
+            
+            // Redirect to home page
+            window.location.href = 'home.html';
+        }
+
+        // Check if already verified (optional - auto-redirect)
+        // Uncomment below if you want auto-redirect for returning visitors
+        /*
+        window.addEventListener('DOMContentLoaded', () => {
+            const ageVerified = localStorage.getItem('ageVerified');
+            const verifiedDate = localStorage.getItem('ageVerifiedDate');
+            
+            // Check if verified within last 30 days
+            if (ageVerified === 'true' && verifiedDate) {
+                const daysSinceVerification = (new Date() - new Date(verifiedDate)) / (1000 * 60 * 60 * 24);
+                if (daysSinceVerification < 30) {
+                    window.location.href = 'home.html';
+                }
+            }
+        });
+        */
+    </script>
 </body>
 </html>
