@@ -16,6 +16,7 @@ const App = {
     this.filters();
     this.animateOnScroll();
     this.dropdownMenus();
+    this.updateFooterYear(); // <-- auto year
   },
 
   // ---------- Mobile Menu ----------
@@ -99,7 +100,6 @@ const App = {
   filters: function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const filterSelects = document.querySelectorAll('.filter-select');
-    const casinoCards = document.querySelectorAll('.casino-card');
 
     if (filterBtns.length === 0 && filterSelects.length === 0) return;
 
@@ -267,6 +267,18 @@ const App = {
           menu.classList.toggle('active');
         }
       });
+    });
+  },
+
+  // ---------- Footer Year ----------
+  updateFooterYear: function() {
+    const year = new Date().getFullYear();
+    // Works on any page that has one of these:
+    // <span class="js-current-year">2024</span>
+    // or <span data-year="2024"></span>
+    const yearTargets = document.querySelectorAll('.js-current-year, [data-year]');
+    yearTargets.forEach(el => {
+      el.textContent = year;
     });
   },
 
